@@ -24,10 +24,16 @@ import ControlButton from '../shared/ControlButton.vue';
 header {
   display: flex;
   justify-content: space-between;
+  height: 100px;
+  padding: 2rem 1.5rem 2rem 2.5rem;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
 
   .controls {
     display: flex;
     justify-content: space-between;
+    width: 33%;
 
     .avatar {
       width: 60px;

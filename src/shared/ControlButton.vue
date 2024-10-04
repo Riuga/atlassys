@@ -11,5 +11,6 @@ div {
   height: 50px;
   padding: 12px;
   cursor: pointer;
+  background-color: #F5F7FA;
 }
 </style>
