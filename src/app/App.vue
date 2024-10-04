@@ -15,6 +15,18 @@ import Profile from '../widgets/Profile.vue'
 <style scoped>
 .content {
   position: relative;
-  margin-left: 16%;
+  margin-left: 16vw;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    margin-left: 10vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    margin-left: auto;
+  }
 }
 </style>

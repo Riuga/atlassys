@@ -1,16 +1,15 @@
 <template>
   <header>
+    <img class="sidebar-btn" src="../assets/sidebar.svg" alt="sidebar" />
     <h1>Setting</h1>
-    <div class="controls">
-      <SearchBar />
-      <ControlButton>
-        <img src="../assets/setting.svg" alt="settings">
-      </ControlButton>
-      <ControlButton>
-        <img src="../assets/notification.svg" alt="notification">
-      </ControlButton>
-      <img class="avatar" src="../assets/avatar.jpg" alt="avatar">
-    </div>
+    <SearchBar />
+    <ControlButton>
+      <img class="control" src="../assets/setting.svg" alt="settings">
+    </ControlButton>
+    <ControlButton>
+      <img class="control" src="../assets/notification.svg" alt="notification">
+    </ControlButton>
+    <img class="avatar" src="../assets/avatar.jpg" alt="avatar">
   </header>
 </template>
 
@@ -22,6 +21,7 @@ import ControlButton from '../shared/ControlButton.vue';
 
 <style lang="scss">
 header {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -30,17 +30,48 @@ header {
   text-align: center;
   background-color: #fff;
 
-  .controls {
-    display: flex;
-    justify-content: space-between;
-    width: 33%;
+  .sidebar-btn {
+    display: none;
+    width: 1rem;
+  }
 
-    .avatar {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
+  h1 {
+    margin-right: auto;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  * {
+    margin-right: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    flex-wrap: wrap;
+    height: 200%;
+
+    .sidebar-btn {
+      display: inline;
     }
 
+    h1 {
+      margin: 0 auto;
+    }
+
+    .control {
+      display: none;
+    }
+
+    input {
+      order: 1;
+      width: 100%;
+    }
   }
 }
 </style>

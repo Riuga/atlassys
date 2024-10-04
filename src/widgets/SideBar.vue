@@ -5,7 +5,7 @@
       <ul>
         <li v-for="element in elements" :key="element.title" :class="element.class">
           <img class="sidebar-img" :src=element.img alt="">
-          {{ element.title }}
+          <span>{{ element.title }}</span>
         </li>
       </ul>
     </nav>
@@ -30,7 +30,7 @@ const elements = [{ title: 'Dashboard', img: '/sidebar/Dashboard.svg' }, { title
   height: 100vh;
   z-index: 2;
   background-color: #FFF;
-  width: 16%;
+  width: 16vw;
 }
 
 .sidebar-img {
@@ -48,9 +48,49 @@ li {
   width: 100%;
   border-left: 5px solid transparent;
   font-size: 1.5rem;
+  cursor: pointer;
 
   img {
     margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1770px) {
+  li {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    width: 10vw;
+  }
+
+  .sidebar-img {
+    width: 25px;
+    margin-right: 0;
+  }
+
+  li {
+    padding: 1rem;
+
+    span {
+      display: none;
+    }
+  }
+
+  .logo {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    display: none;
   }
 }
 </style>

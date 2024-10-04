@@ -8,7 +8,7 @@
       </ul>
     </nav>
     <div class="content-wrapper">
-      <div>
+      <div class="avatar-wrapper">
         <img class="avatar" src="../assets/avatar.jpg" alt="avatar">
       </div>
       <form>
@@ -110,6 +110,7 @@ form {
     border: none;
     border-radius: 15px;
     padding: 1rem 3.5rem;
+    cursor: pointer;
   }
 }
 
@@ -124,6 +125,44 @@ ul {
   li {
     margin-right: 4rem;
     font-size: 1.3rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1770px) {
+  button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  form {
+    div {
+      width: 100%;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 1200px) {
+  li {
+    span {
+      display: none;
+    }
+  }
+
+  .logo {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .content-wrapper {
+    flex-direction: column;
+
+    .avatar-wrapper {
+      margin: 0 auto;
+    }
   }
 }
 </style>

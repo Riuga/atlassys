@@ -13,4 +13,10 @@ div {
   cursor: pointer;
   background-color: #F5F7FA;
 }
+
+@media screen and (max-width: 800px) {
+  div {
+    display: none;
+  }
+}
 </style>
